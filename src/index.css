@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+
+ /* in your CSS file, e.g., index.css */
+.custom-scrollbar::-webkit-scrollbar {
+    width: 1px;               /* width of scrollbar */
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;      /* track color */
+    border-radius: 10px;
+  }
+  
+  .custom-scrollbar::-webkit-scrollbar-thumb {
+    background-color: white; /* thumb color */
+    border-radius: 10px;
+    border: 2px solid #f0f0f0; /* padding around thumb */
+  }
+  
