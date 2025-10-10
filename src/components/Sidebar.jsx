@@ -65,7 +65,7 @@ const Sidebar = ({ sidebar, category, setCategory}) => {
     >
       <div className="py-2">
         {/* Home */}
-        <div className="px-3 py-2">
+        <div className="px-3">
           <MenuItem img={home} label="Home" id="0" />
         </div>
 

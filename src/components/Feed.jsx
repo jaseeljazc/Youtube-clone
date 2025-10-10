@@ -292,10 +292,10 @@ const Feed = ({ category = "0" }) => {
       let videoListUrl;
       
       if (!category || category === "0" || category === 0) {
-        videoListUrl = `https://www.googleapis.com/youtube/v3/videos?part=snippet,contentDetails,statistics&chart=mostPopular&maxResults=50&regionCode=IN&key=${API_KEY}`;
+        videoListUrl = `https://www.googleapis.com/youtube/v3/videos?part=snippet,contentDetails,statistics&chart=mostPopular&maxResults=50&regionCode=US&key=${API_KEY}`;
       } else {
         const categoryId = String(category);
-        videoListUrl = `https://www.googleapis.com/youtube/v3/videos?part=snippet,contentDetails,statistics&chart=mostPopular&maxResults=50&regionCode=IN&videoCategoryId=${categoryId}&key=${API_KEY}`;
+        videoListUrl = `https://www.googleapis.com/youtube/v3/videos?part=snippet,contentDetails,statistics&chart=mostPopular&maxResults=50&regionCode=US&videoCategoryId=${categoryId}&key=${API_KEY}`;
       }
       
       console.log("Fetching URL:", videoListUrl);
@@ -339,7 +339,7 @@ const Feed = ({ category = "0" }) => {
 
   return (
     <div className="p-0 sm:p-4">
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2 ">
         {data.map((item, idx) => {
           const bgColor = thumbnailColors[item.id] || generateColorFromString(item.id);
           
@@ -347,7 +347,7 @@ const Feed = ({ category = "0" }) => {
             <Link 
               to={`video/${item.snippet.categoryId}/${item.id}`} 
               key={item.id || idx} 
-              className="cursor-pointer group rounded-xl transition-transform duration-300 ease-in-out hover:scale-105 pb-2"
+              className="cursor-pointer group rounded-xl pb-1 transition-transform duration-300 ease-in-out hover:scale-105 "
               onMouseEnter={(e) => {
                 e.currentTarget.style.backgroundColor = `rgba(${bgColor}, 0.2)`;
               }}
