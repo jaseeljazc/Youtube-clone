@@ -3,6 +3,8 @@
 A minimal YouTube-style clone built with **React** and **Vite**.  
 This project demonstrates modern React development basics, fast refresh, ESLint setup, and clean UI.
 
+**Live Demo:** [https://jasyoutube-clone.netlify.app/](https://jasyoutube-clone.netlify.app/)
+
 ---
 
 ## About
@@ -17,7 +19,7 @@ Features include video listing, search interface, responsive layout, and navigat
 - **React** (with Hooks)
 - **Vite** (blazing fast tooling)
 - **JavaScript**
-- **CSS**
+- **TailwindCSS**
 - **HTML**
 
 ---
